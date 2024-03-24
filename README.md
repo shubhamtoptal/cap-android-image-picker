@@ -1,37 +1,27 @@
-# androidimagepicker
 
-Capacitor Android Image Picker To get Lat and Lng
+<h3 align="center">Android Image Picker</h3>
+<p align="center">
+  Capacitor plugin that allows the user to select multiple images on android and also retrieve geo data
+</p>
 
-## Install
+## Installation
 
 ```bash
 npm install androidimagepicker
 npx cap sync
 ```
 
-## API
+## Configuration
 
-<docgen-index>
+No configuration required for this plugin.
 
-* [`echo(...)`](#echo)
-
-</docgen-index>
-
-<docgen-api>
-<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### echo(...)
+## Usage
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+import { Plugins } from  "@capacitor/core";
+const { AndroidImagePicker } =  Plugins;
+
+const pickImages = async () => {
+  const { files } =  await  AndroidImagePicker.pickImages();
+};
 ```
-
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
-
---------------------
-
-</docgen-api>
